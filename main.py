@@ -114,7 +114,7 @@ async def callback_handler(callback: CallbackQuery, bot:Bot):
         )
         await callback.message.edit_text(text, reply_markup=get_create_bot_keyboard(), parse_mode="HTML")
     elif callback.data == "back_to_menu":
-        text = f"{html.bold("Откройте мир безопасности и приватности с нами!")}\n\nМы обеспечиваем защиту ваших данных, предоставляя надёжный и эффективный сервис VPN для безопасного и анонимного пользования интернетом. Ваши данные под защитой, а вы — в безопасности."
+        text = f"{html.bold('Откройте мир безопасности и приватности с нами!')}\n\nМы обеспечиваем защиту ваших данных, предоставляя надёжный и эффективный сервис VPN для безопасного и анонимного пользования интернетом. Ваши данные под защитой, а вы — в безопасности."
                             
         await callback.message.edit_text(text, reply_markup = main_menu_keyboard())
     
