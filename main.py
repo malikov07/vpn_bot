@@ -30,7 +30,7 @@ async def command_start_handler(message: Message, bot:Bot) -> None:
     """
 
     if await is_user_subscribed(message.from_user.id,bot):
-        await message.answer(f"{html.bold("Откройте мир безопасности и приватности с нами!")}\n\nМы обеспечиваем защиту ваших данных, предоставляя надёжный и эффективный сервис VPN для безопасного и анонимного пользования интернетом. Ваши данные под защитой, а вы — в безопасности."
+        await message.answer(f"{html.bold('Откройте мир безопасности и приватности с нами!')}\n\nМы обеспечиваем защиту ваших данных, предоставляя надёжный и эффективный сервис VPN для безопасного и анонимного пользования интернетом. Ваши данные под защитой, а вы — в безопасности."
                             , reply_markup=main_menu_keyboard())
     else:
         await force_subscription(message,bot)
@@ -42,7 +42,7 @@ async def force_subscription(message: Message, bot:Bot):
 @dp.callback_query(F.data.in_({"check_subs"}))
 async def check_subs(callback: CallbackQuery, bot:Bot ):
     if await is_user_subscribed(callback.from_user.id, bot):
-        await callback.message.answer(f"{html.bold("Откройте мир безопасности и приватности с нами!")}\n\nМы обеспечиваем защиту ваших данных, предоставляя надёжный и эффективный сервис VPN для безопасного и анонимного пользования интернетом. Ваши данные под защитой, а вы — в безопасности."
+        await callback.message.answer(f"{html.bold('Откройте мир безопасности и приватности с нами!')}\n\nМы обеспечиваем защиту ваших данных, предоставляя надёжный и эффективный сервис VPN для безопасного и анонимного пользования интернетом. Ваши данные под защитой, а вы — в безопасности."
                             , reply_markup=main_menu_keyboard())
         await callback.message.delete()
         await callback.answer()
